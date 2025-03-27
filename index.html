@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty Salon</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Tailwind css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-graylight: #f9f9f9;
+        --color-gray: #767676;
+        --color-primary: #69b99d;
+        --color-secondary: #0f241d;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", sans-serif;
+      }
+      .container {
+        @apply container mx-auto px-4;
+      }
+      .nav__link {
+        @apply text-[16px] leading-none font-normal text-secondary transition-all duration-700 hover:text-primary hover:underline;
+      }
+      .section__title {
+        @apply text-[30px] lg:text-4xl font-bold text-secondary;
+      }
+    </style>
+  </head>
+  <body>
+       <!-- Header section starts -->
+    <header
+      class="sticky top-0 z-50 py-5 bg-graylight border-b border-gray-300"
+    >
+      <div class="container">
+        <div class="flex justify-between items-center">
+          <a href="/">
+            <img src="./images/Logo.svg" alt="logo" />
+          </a>
+          <nav class="hidden lg:flex items-center gap-10">
+            <a href="#hero" class="nav__link">Início</a>
+            <a href="#about" class="nav__link">Sobre</a>
+            <a href="#services" class="nav__link">Serviços</a>
+            <a href="#clients" class="nav__link">Depoimentos</a>
+            <a href="#contact" class="nav__link">Contato</a>
+          </nav>
+          <div class="lg:hidden cursor-pointer text-primary text-2xl">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header section ends -->
+
+    <!-- Hero section starts -->
+    <section class="py-20 bg-graylight" id="hero">
+      <div class="container">
+        <div
+          class="flex flex-col-reverse lg:flex-row gap-6 items-center justify-between"
+        >
+          <div class="w-full lg:w-[396px] flex flex-col gap-5 items-start">
+            <h1 class="section__title">Saúde natural para os seus cabelos</h1>
+            <p class="text-[16px] lg:text-[18px] leading-tight text-gray">
+              Um salão exclusivo em São Paulo, especializado em tratamentos
+              naturais.
+            </p>
+            <button
+              class="bg-primary py-3.5 px-8 rounded text-base text-graylight font-medium cursor-pointer"
+            >
+              Agendar um horário
+            </button>
+          </div>
+          <div>
+            <img src="./images/Img.svg" alt="hero image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero section ends -->
+
+    <!-- About us section starts -->
+    <section class="py-20" id="about">
+      <div class="container">
+        <div
+          class="flex flex-col lg:flex-row gap-6 items-center justify-between"
+        >
+          <div class="flex-1">
+            <img src="./images/about.svg" alt="about image" />
+          </div>
+          <div class="flex-1">
+            <h2 class="section__title mb-4">Sobre nós</h2>
+            <p class="text-base text-gray">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse sagittis arcu quis nisi luctus, id accumsan felis
+              tristique. Proin quis bibendum diam. Sed consequat nisl laoreet
+              eros ultricies pellentesque. Nullam in est porta, pellentesque
+              massa vitae, vehicula risus. <br />
+              <br />
+              In placerat, felis vitae sodales dictum, lacus quam pretium mi, ut
+              pretium urna turpis eu dui. Vestibulum id ullamcorper nibh. Donec
+              luctus, nunc finibus elementum suscipit, tortor augue vulputate
+              sapien, vitae feugiat enim augue sed. Quisque id aliquam elit.
+              Suspendisse congue pharetra maximus. Duis rutrum velit a leo
+              euismod dictum. <br />
+              <br />
+              Sed sodales est efficitur arcu tincidunt tincidunt. Curabitur
+              fringilla, risus at feugiat feugiat, nisl nulla tincidunt tellus,
+              elementum elementum lorem nisl eleifend dolor. Nullam eget dui at
+              sem ullamcorper luctus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About us section ends -->
+
+    <!-- Services section starts -->
+    <section class="bg-graylight py-20" id="services">
+      <div class="container">
+        <div
+          class="flex flex-col md:items-center md:justify-center md:text-center gap-5"
+        >
+          <h2 class="section__title">Serviços</h2>
+          <p class="text-[18px] leading-tight font-normal lg:w-[523px]">
+            Com mais de 10 anos no mercado, o
+            <span class="text-primary">Beautysalon</span> já conquistou clientes
+            de inúmeros países com seus tratamentos exclusivos e totalmente
+            naturais
+          </p>
+        </div>
+        <div class="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-graylight p-10 md:p-12 lg:p-14 shadow rounded-md border-b-4 border-primary flex flex-col gap-5 items-center justify-center text-center"
+          >
+            <img src="./images/Icon.svg" alt="service-1 image" />
+            <h3 class="text-2xl leading-none text-secondary font-bold">
+              Terapia capilar
+            </h3>
+            <p class="text-base leading-tight font-normal text-gray">
+              Terapia com pleta para couro cabeludo e fios, protegendo todos os
+              tipos de cabelos, inclusive os longos e finos.
+            </p>
+          </div>
+          <div
+            class="bg-graylight p-10 md:p-12 lg:p-14 shadow rounded-md border-b-4 border-primary flex flex-col gap-5 items-center justify-center text-center"
+          >
+            <img src="./images/Vector.svg" alt="service-2 image" />
+            <h3 class="text-2xl leading-none text-secondary font-bold">
+              Cortes
+            </h3>
+            <p class="text-base leading-tight font-normal text-gray">
+              A nossa equipe é repleta de profissionais renomados, famosos por
+              lançarem tendências com cortes diferenciados e clássicos.
+            </p>
+          </div>
+          <div
+            class="bg-graylight p-10 md:p-12 lg:p-14 shadow rounded-md border-b-4 border-primary flex flex-col gap-5 items-center justify-center text-center"
+          >
+            <img src="./images/Icon (1).svg" alt="service-3 image" />
+            <h3 class="text-2xl leading-none text-secondary font-bold">
+              Tratamentos
+            </h3>
+            <p class="text-base leading-tight font-normal text-gray">
+              O beautysalon conta com diversos tratamentos naturais e totalmente
+              veganos, para qualquer tipo de cabelo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services section ends -->
+
+    <!-- Clients section starts -->
+    <section class="py-20 lg:py-32" id="clients">
+      <div class="container">
+        <div class="flex justify-center items-center mb-10">
+          <h2 class="section__title w-full md:w-[481px] md:text-center">
+            Depoimentos de quem já passou por aqui
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+          <div class="p-6 lg:p-12 rounded shadow-md bg-white">
+            <p class="text-base text-secondary mb-5">
+              <span class="text-primary"
+                ><i class="fa-solid fa-quote-left"></i
+              ></span>
+              Eu sou cliente do Beautysalon há 5 anos e não troco por nada!
+              Certamente meu cabelo mudou muito depois que comecei a tratar
+              somente com produtos naturais e veganos. São profissionais
+              incríveis e qualificados.
+            </p>
+            <div class="flex items-center gap-2">
+              <img src="./images/client-img-1.svg" alt="client 1 image" />
+              <p class="text-base text-gray">Wanessa Souza</p>
+            </div>
+          </div>
+          <div class="p-6 lg:p-12 rounded shadow-md bg-white">
+            <p class="text-base text-secondary mb-5">
+              <span class="text-primary"
+                ><i class="fa-solid fa-quote-left"></i
+              ></span>
+              Minha mãe frequenta o salão há anos e me levou um dia para
+              conhecer. Minha experiência foi incrível, eu continuo fazendo o a
+              terapia capilar e isso salvou o meu cabelo. Adoro todos os
+              profissionais do Beautysalon.
+            </p>
+            <div class="flex items-center gap-2">
+              <img src="./images/client-img-2.svg" alt="client 2 image" />
+              <p class="text-base text-gray">Luna Falcão</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients section ends -->
+
+    <!-- Contact Section Starts -->
+    <section id="contact" class="bg-graylight py-40">
+      <div class="container">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div class="flex flex-col gap-4 w-full lg:w-[404px]">
+            <h2 class="section__title">Entre em contato com a gente!</h2>
+
+            <p class="font-normal text-gray">
+              Entre em contato com a Beautysalon, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+
+            <button
+              class="bg-primary py-3.5 px-8 rounded text-base text-graylight font-medium cursor-pointer w-[236px]"
+            >
+              <i class="fa-brands fa-whatsapp text-primary"></i> Entrar em
+              contato
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-phone text-primary"></i>
+              <span class="text-gray">11 99845-6754</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-location-dot text-primary"></i>
+              <span class="text-gray">R. Amauri Souza, 346</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-envelope text-primary"></i>
+              <span class="text-gray">contato@beautysalon.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section Ends -->
+
+    <!-- Footer Starts -->
+    <footer id="footer" class="bg-primary py-20">
+      <div class="container">
+        <div class="lg:flex  justify-between items-center  gap-5 ">
+        <div class="flex flex-col w-[250px] gap-4">
+          <img src="/images/Logo (1).svg" alt="logo" />
+          <span class="text-white">©2021 Beautysalon.</span>
+          <span class="text-white">Todos os direitos reservados.</span>
+        </div>
+
+        <div class="flex gap-6 pt-10 justify-center">
+         <a href="https://t.me/atakhanov"> <i class="fa-brands fa-instagram fa-2xl text-white"></i></a>
+          <a href="https://t.me/atakhanov"><i class="fa-brands fa-facebook  fa-2xl text-white"></i></a>
+          <a href="https://t.me/atakhanov"><i class="fa-brands fa-youtube  fa-2xl text-white"></i></a>
+        </div>
+
+      </div>
+    
+    </footer>
+     
+    <!-- Footer Ends -->
+  </body>
+</html>
